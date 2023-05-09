@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'/>
+    <meta content='width=device-width,minimum-scale=1,initial-scale=1' name='viewport'/>
+    <meta name="theme-color" content="#ffffff"/>
+    <meta name="msapplication-TileColor" content="#ffffff"/>
+    <title>
+        Sorting Numbers In Excel: A Beginner&#039;s Guide
+    </title>
+    <style type="text/css">
+        html{box-sizing:border-box;-ms-overflow-style:scrollbar}body{margin:0 auto;font-family:'Roboto',sans-serif;font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}.top_main{margin-top: 100px;}footer{text-align:center}table{display:table}*,*::before,*::after{box-sizing:inherit}.btn{display:inline-block;font-weight:400;color:#212529;text-align:center;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;border-top-color:transparent;border-right-color:transparent;border-bottom-color:transparent;border-left-color:transparent;padding:.375rem .75rem;margin:0.5rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}.btn-danger{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-success{color:#fff;background-color:#28a745;border-color:#28a745}.btn-group-sm>.btn,.btn-sm{padding:.25rem .5rem;font-size:.875rem;line-height:1.5;border-radius:.2rem}.hide{display:none;visibility:hidden}.popbox{position:fixed;top:0;left:0;bottom:0;width:100%;z-index:1000000}.pop-content{display:block;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;box-shadow:0 3px 20px 0 rgba(0,0,0,.5)}.popcontent{padding:20px;background:#fff;border-radius:5px;overflow:hidden}.pop-overlay{position:absolute;top:0;left:0;bottom:0;width:100%;z-index:1;background:rgb(255 255 255 / 93%)}.popbox-close-button{position:absolute;width:28px;height:28px;line-height:28px;text-align:center;top:-14px;right:-14px;color:#c82333;background-color:#fff;box-shadow:0 -1px 1px 0 rgba(0,0,0,.2);border:none;border-radius:50%;cursor:pointer;font-size:28px;font-weight:700;padding:0}.popcontent img{width:100%;height:100%;display:block}.flowbox{position:relative;overflow:hidden}@media  screen and (max-width:840px){.pop-content{width:90%;height:auto;top:20%}.popcontent img{height:auto}}.image-parent{max-width: 40px;}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Article",
+    "author": {
+      "@type": "Person",
+      "name": "Jolodot",
+      "url": "https://www.google.com/search?q=Jolodot"
+    },
+    "headline": "เรียง ลํา ดับ เลข Excel",
+    "datePublished": "2023-03-19T14:39:32Z",
+    "image": "https://tse1.mm.bing.net/th?q=%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%87%20%E0%B8%A5%E0%B9%8D%E0%B8%B2%20%E0%B8%94%E0%B8%B1%E0%B8%9A%20%E0%B9%80%E0%B8%A5%E0%B8%82%20excel",
+    "publisher": {
+      "@type": "Organization",
+      "name": "REFETIPS",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tse1.mm.bing.net/th?q=%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%87%20%E0%B8%A5%E0%B9%8D%E0%B8%B2%20%E0%B8%94%E0%B8%B1%E0%B8%9A%20%E0%B9%80%E0%B8%A5%E0%B8%82%20excel&amp;w=250&amp;h=250&amp;c=7",
+        "width": 250,
+        "height": 250
+      }
+    }
+  }
+</script><link rel="preconnect" href="https://i2.wp.com">
+<link rel="dns-prefetch" href="https://i2.wp.com">
+<link rel="preconnect" href="https://i.pinimg.com">
+<link rel="dns-prefetch" href="https://i.pinimg.com">
+<link rel="preload" href="https://tse1.mm.bing.net/th?q=%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%87%20%E0%B8%A5%E0%B9%8D%E0%B8%B2%20%E0%B8%94%E0%B8%B1%E0%B8%9A%20%E0%B9%80%E0%B8%A5%E0%B8%82%20excel" as="image" media="(max-width: 420px)">
+<link rel="preload" href="https://tse1.mm.bing.net/th?q=%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%87%20%E0%B8%A5%E0%B9%8D%E0%B8%B2%20%E0%B8%94%E0%B8%B1%E0%B8%9A%20%E0%B9%80%E0%B8%A5%E0%B8%82%20excel" as="image" media="(min-width: 420.1px)" >
+    <!-- Head tag Code -->
+<script type = "text/javascript" > history.pushState(null, null); window.addEventListener('popstate', function(event) { history.pushState(null, null); }); </script></head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top py-3">
+      <a class="navbar-brand" href="/">
+        REFETIPS
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+                      <li class="nav-item">
+              <a class="nav-link" href="dmca.html">Dmca</a>
+            </li>
+                        <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+                        <li class="nav-item">
+              <a class="nav-link" href="privacy-policy.html">Privacy Policy</a>
+            </li>
+                        <li class="nav-item">
+              <a class="nav-link" href="copyright.html">Copyright</a>
+            </li>
+                      
+        </ul>
+        <form id="search-box" class="form-inline my-2 my-lg-0" >
+          <div class="input-group">
+                            <input id="search_query" type="text" class="form-control" aria-label="Search input" placeholder="Search here..">
+          </div>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main" class="container top_main">
+
+      <header>
+        <center>
+          <h1>
+            Sorting Numbers In Excel: A Beginner&#039;s Guide
+          </h1>
+          <p class="lead">
+                          Career Reference and Success Tips. Search anything Best Creative Reference Ideas in this website.
+                      </p>
+        </center>
+      </header>
+      <!-- <div class="d-block p-4">
+	<center>
+		TOP_BANNER_ADS
+	</center>
+</div> -->      <div class="row">
+        <div class="col-md-8 p-md-2 border">
+          <article><figure><noscript><img src="https://tse1.mm.bing.net/th?q=%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%87%20%E0%B8%A5%E0%B9%8D%E0%B8%B2%20%E0%B8%94%E0%B8%B1%E0%B8%9A%20%E0%B9%80%E0%B8%A5%E0%B8%82%20excel" alt="เรียงลำดับตัวเลขจากน้อยไปหามาก worksheet" width="640" height="360" /></noscript><img class="v-cover ads-img" src="https://tse1.mm.bing.net/th?q=%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%87%20%E0%B8%A5%E0%B9%8D%E0%B8%B2%20%E0%B8%94%E0%B8%B1%E0%B8%9A%20%E0%B9%80%E0%B8%A5%E0%B8%82%20excel" alt="เรียงลำดับตัวเลขจากน้อยไปหามาก worksheet" width="100%" style="margin-right: 8px;margin-bottom: 8px;" /><figcaption>เรียงลำดับตัวเลขจากน้อยไปหามาก worksheet from www.liveworksheets.com</figcaption></figure><p>Microsoft Excel is a powerful tool that can help you organize and analyze data. One of the most common tasks that you'll encounter when working with Excel is sorting data. Whether you're dealing with a list of sales figures, a database of customer information, or any other type of data, sorting can help you find what you need quickly and easily. In this article, we'll explore the basics of sorting numbers in Excel and show you how to get started.</p><h2>Step 1: Select the Data to Sort</h2><p>The first step in sorting numbers in Excel is to select the data that you want to sort. This can be a single column or multiple columns of data. To select the data, simply click and drag your mouse over the cells that you want to sort. You can also use the keyboard shortcuts Ctrl+A to select all of the data in the worksheet or Ctrl+Shift+End to select all of the data from the current cell to the last cell in the worksheet.</p><h2>Step 2: Choose the Sorting Method</h2><p>Once you've selected the data that you want to sort, you need to choose the sorting method. There are two main sorting methods in Excel: ascending and descending. Ascending sorts the data from smallest to largest, while descending sorts the data from largest to smallest. To choose the sorting method, click on the "Sort & Filter" button in the "Home" tab of the Excel ribbon. Then, select either "Sort A to Z" for ascending or "Sort Z to A" for descending.</p><h2>Step 3: Sort the Data</h2><p>With the data selected and the sorting method chosen, you're ready to sort the data. Simply click on the "Sort" button in the "Sort & Filter" menu. Excel will automatically sort the data according to your chosen method. If you've selected multiple columns of data, you'll be asked to choose the primary and secondary sorting columns. This allows you to sort the data by two different criteria, such as sorting first by date and then by sales figures.</p><h2>Conclusion</h2><p>Sorting numbers in Excel is a quick and easy way to organize your data. By following these simple steps, you can sort your data in ascending or descending order, making it easier to find what you need. Whether you're a beginner or an experienced Excel user, sorting is an essential skill that you'll use time and time again.</p><p>Excel is a powerful tool that can help you analyze large amounts of data. One of the most useful features of Excel is the ability to filter data. Filtering allows you to focus on specific subsets of data, making it easier to find the information you need. In this article, we'll explore the basics of using filters to analyze data in Excel.</p><h2>Step 1: Select the Data to Filter</h2><p>The first step in using filters in Excel is to select the data that you want to filter. This can be a single column or multiple columns of data. To select the data, simply click and drag your mouse over the cells that you want to filter. You can also use the keyboard shortcuts Ctrl+A to select all of the data in the worksheet or Ctrl+Shift+End to select all of the data from the current cell to the last cell in the worksheet.</p><h2>Step 2: Apply the Filter</h2><p>Once you've selected the data that you want to filter, you need to apply the filter. To do this, click on the "Filter" button in the "Data" tab of the Excel ribbon. This will add filter arrows to the top of each column of data. Click on the filter arrow for the column that you want to filter and select the criteria that you want to use. For example, if you're filtering a list of sales figures, you might want to filter by region or by product type.</p><h2>Step 3: Analyze the Filtered Data</h2><p>With the data filtered, you can now analyze the filtered data. You can apply additional filters to further refine the data, or you can use Excel's built-in functions and formulas to perform calculations on the data. For example, you might want to calculate the total sales for a specific region or product type. Excel makes it easy to do this using functions like SUMIF and COUNTIF.</p><h2>Conclusion</h2><p>Using filters in Excel is a powerful way to analyze large amounts of data. By following these simple steps, you can filter your data by specific criteria, making it easier to find the information you need. Whether you're a beginner or an experienced Excel user, filtering is an essential skill that you'll use time and time again.</p><p>Excel is a powerful tool that can help you summarize and analyze large amounts of data. One of the most useful features of Excel is the PivotTable. PivotTables allow you to summarize data by different categories, making it easier to see patterns and trends in your data. In this article, we'll explore the basics of using PivotTables to summarize data in Excel.</p><h2>Step 1: Select the Data to Summarize</h2><p>The first step in using PivotTables in Excel is to select the data that you want to summarize. This can be a single column or multiple columns of data. To select the data, simply click and drag your mouse over the cells that you want to summarize. You can also use the keyboard shortcuts Ctrl+A to select all of the data in the worksheet or Ctrl+Shift+End to select all of the data from the current cell to the last cell in the worksheet.</p><h2>Step 2: Create the PivotTable</h2><p>Once you've selected the data that you want to summarize, you need to create the PivotTable. To do this, click on the "PivotTable" button in the "Insert" tab of the Excel ribbon. This will open the "Create PivotTable" dialog box. Select the range of cells that you want to use for the PivotTable and choose where you want to place the PivotTable. Click "OK" to create the PivotTable.</p><h2>Step 3: Add Fields to the PivotTable</h2><p>With the PivotTable created, you can now add fields to the PivotTable. Fields are the categories that you want to use to summarize your data. For example, if you're summarizing sales data, you might want to add the "Region" field and the "Product Type" field. To add a field, simply drag it from the "Field List" onto the PivotTable. You can also rearrange fields by dragging them to a new location.</p><h2>Step 4: Analyze the PivotTable</h2><p>With the fields added, you can now analyze the PivotTable. Excel automatically summarizes the data by each category, making it easy to see patterns and trends in your data. You can also use Excel's built-in functions and formulas to perform calculations on the data. For example, you might want to calculate the total sales for a specific region or product type. Excel makes it easy to do this using functions like SUM and AVERAGE.</p><h2>Conclusion</h2><p>Using PivotTables in Excel is a powerful way to summarize and analyze large amounts of data. By following these simple steps, you can create a PivotTable and use fields to summarize your data by different categories. Whether you're a beginner or an experienced Excel user, PivotTables are an essential tool that can help you make sense of your data.</p><p>Excel is a powerful tool that can help you visualize and analyze data. One of the most useful features of Excel is conditional formatting. Conditional formatting allows you to highlight cells that meet specific criteria, making it easier to see patterns and trends in your data. In this article, we'll explore the basics of using conditional formatting to highlight data in Excel.</p><h2>Step 1: Select the Data to Highlight</h2><p>The first step in using conditional formatting in Excel is to select the data that you want to highlight. This can be a single cell or multiple cells of data. To select the data, simply click and drag your mouse over the cells that you want to highlight. You can also use the keyboard shortcuts Ctrl+A to select all of the data in the worksheet or Ctrl+Shift+End to select all of the data from the current cell to the last cell in the worksheet.</p><h2>Step 2: Apply the Conditional Formatting</h2><p>Once you've selected the data that you want to highlight, you need to apply the conditional formatting. To do this, click on the "Conditional Formatting" button in the "Home" tab of the Excel ribbon. This will open a dropdown menu of different conditional formatting options. Select the option that best fits your needs. For example, you might want to highlight cells that contain a specific value or cells that are above or below a certain threshold.</p><h2>Step 3: Customize the Formatting</h2><p>With the conditional formatting applied, you can now customize the formatting. You can change the color of the highlighted cells, add borders, or apply other formatting options. To customize the formatting, click on the "Manage Rules" button in the "Conditional Formatting" menu. This will open a dialog box where you can make changes to the formatting rules.</p><h2>Conclusion</h2 </article><!--more--><section></section> 
+          <!-- <div class="d-block p-4">
+	<center>
+		BOTTOM_BANNER_ADS
+	</center>
+</div> -->        </div>
+        <div class="col-md-4 p-2">
+            <h3>More  articles : </h3>
+            <ul class="list-group">
+                                        
+              <li class="list-group-item d-flex justify-content-between align-items-center mb-1">
+                <a href="dotati-di-molto-fegato-cruciverba.html">
+                dotati di molto fegato cruciverba 
+                </a>
+                <div class="image-parent">
+                    <a href="dotati-di-molto-fegato-cruciverba.html">
+                    <img src="https://tse1.mm.bing.net/th?q=dotati%20di%20molto%20fegato%20cruciverba&amp;w=50&amp;h=50&amp;c=7" class="img-fluid" alt="dotati di molto fegato cruciverba">
+                    </a>
+                </div>                    
+              </li>                
+                                        
+              <li class="list-group-item d-flex justify-content-between align-items-center mb-1">
+                <a href="เคร-อง-ซ-ก-ผ-า-น-า-ไหล-ออก-ไม-หย-ด-lg.html">
+                เครื่อง ซัก ผ้า น้ํา ไหล ออก ไม่ หยุด lg 
+                </a>
+                <div class="image-parent">
+                    <a href="เคร-อง-ซ-ก-ผ-า-น-า-ไหล-ออก-ไม-หย-ด-lg.html">
+                    <img src="https://tse1.mm.bing.net/th?q=%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%20%E0%B8%8B%E0%B8%B1%E0%B8%81%20%E0%B8%9C%E0%B9%89%E0%B8%B2%20%E0%B8%99%E0%B9%89%E0%B9%8D%E0%B8%B2%20%E0%B9%84%E0%B8%AB%E0%B8%A5%20%E0%B8%AD%E0%B8%AD%E0%B8%81%20%E0%B9%84%E0%B8%A1%E0%B9%88%20%E0%B8%AB%E0%B8%A2%E0%B8%B8%E0%B8%94%20lg&amp;w=50&amp;h=50&amp;c=7" class="img-fluid" alt="เครื่อง ซัก ผ้า น้ํา ไหล ออก ไม่ หยุด lg">
+                    </a>
+                </div>                    
+              </li>                
+                                        
+              <li class="list-group-item d-flex justify-content-between align-items-center mb-1">
+                <a href="zachte-geitenwol-uit-tibet.html">
+                zachte geitenwol uit tibet 
+                </a>
+                <div class="image-parent">
+                    <a href="zachte-geitenwol-uit-tibet.html">
+                    <img src="https://tse1.mm.bing.net/th?q=zachte%20geitenwol%20uit%20tibet&amp;w=50&amp;h=50&amp;c=7" class="img-fluid" alt="zachte geitenwol uit tibet">
+                    </a>
+                </div>                    
+              </li>                
+                                        
+              <li class="list-group-item d-flex justify-content-between align-items-center mb-1">
+                <a href="internet-outage-map-live.html">
+                internet outage map live 
+                </a>
+                <div class="image-parent">
+                    <a href="internet-outage-map-live.html">
+                    <img src="https://tse1.mm.bing.net/th?q=internet%20outage%20map%20live&amp;w=50&amp;h=50&amp;c=7" class="img-fluid" alt="internet outage map live">
+                    </a>
+                </div>                    
+              </li>                
+                                        
+              <li class="list-group-item d-flex justify-content-between align-items-center mb-1">
+                <a href="when-is-the-rainy-season-in-florida.html">
+                when is the rainy season in florida 
+                </a>
+                <div class="image-parent">
+                    <a href="when-is-the-rainy-season-in-florida.html">
+                    <img src="https://tse1.mm.bing.net/th?q=when%20is%20the%20rainy%20season%20in%20florida&amp;w=50&amp;h=50&amp;c=7" class="img-fluid" alt="when is the rainy season in florida">
+                    </a>
+                </div>                    
+              </li>                
+                                        
+              <li class="list-group-item d-flex justify-content-between align-items-center mb-1">
+                <a href="response-to-a-wild-story-nyt.html">
+                response to a wild story nyt 
+                </a>
+                <div class="image-parent">
+                    <a href="response-to-a-wild-story-nyt.html">
+                    <img src="https://tse1.mm.bing.net/th?q=response%20to%20a%20wild%20story%20nyt&amp;w=50&amp;h=50&amp;c=7" class="img-fluid" alt="response to a wild story nyt">
+                    </a>
+                </div>                    
+              </li>                
+                                        
+              <li class="list-group-item d-flex justify-content-between align-items-center mb-1">
+                <a href="hull-city-season-ticket-prices.html">
+                hull city season ticket prices 
+                </a>
+                <div class="image-parent">
+                    <a href="hull-city-season-ticket-prices.html">
+                    <img src="https://tse1.mm.bing.net/th?q=hull%20city%20season%20ticket%20prices&amp;w=50&amp;h=50&amp;c=7" class="img-fluid" alt="hull city season ticket prices">
+                    </a>
+                </div>                    
+              </li>                
+                                        
+              <li class="list-group-item d-flex justify-content-between align-items-center mb-1">
+                <a href="คร-ม-อาบ-น-า-lux.html">
+                ครีม อาบ น้ํา lux 
+                </a>
+                <div class="image-parent">
+                    <a href="คร-ม-อาบ-น-า-lux.html">
+                    <img src="https://tse1.mm.bing.net/th?q=%E0%B8%84%E0%B8%A3%E0%B8%B5%E0%B8%A1%20%E0%B8%AD%E0%B8%B2%E0%B8%9A%20%E0%B8%99%E0%B9%89%E0%B9%8D%E0%B8%B2%20lux&amp;w=50&amp;h=50&amp;c=7" class="img-fluid" alt="ครีม อาบ น้ํา lux">
+                    </a>
+                </div>                    
+              </li>                
+                                        
+              <li class="list-group-item d-flex justify-content-between align-items-center mb-1">
+                <a href="แจ-ง-ไฟฟ-า-ด-บ-อ-บลราชธาน.html">
+                แจ้ง ไฟฟ้า ดับ อุบลราชธานี 
+                </a>
+                <div class="image-parent">
+                    <a href="แจ-ง-ไฟฟ-า-ด-บ-อ-บลราชธาน.html">
+                    <img src="https://tse1.mm.bing.net/th?q=%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87%20%E0%B9%84%E0%B8%9F%E0%B8%9F%E0%B9%89%E0%B8%B2%20%E0%B8%94%E0%B8%B1%E0%B8%9A%20%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%A5%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%B5&amp;w=50&amp;h=50&amp;c=7" class="img-fluid" alt="แจ้ง ไฟฟ้า ดับ อุบลราชธานี">
+                    </a>
+                </div>                    
+              </li>                
+                                        
+              <li class="list-group-item d-flex justify-content-between align-items-center mb-1">
+                <a href="hardhearted-7-little-words.html">
+                hardhearted 7 little words 
+                </a>
+                <div class="image-parent">
+                    <a href="hardhearted-7-little-words.html">
+                    <img src="https://tse1.mm.bing.net/th?q=hardhearted%207%20little%20words&amp;w=50&amp;h=50&amp;c=7" class="img-fluid" alt="hardhearted 7 little words">
+                    </a>
+                </div>                    
+              </li>                
+                        </ul>
+          <!-- <div class="d-block p-4">
+	<center>
+		SIDEBAR_ADS
+	</center>
+</div> -->        </div>
+      </div>
+
+    </main><!-- /.container -->
+    <footer class="container border-top mt-4 py-4">
+      <center>2023 REFETIPS. All rights reserved </center>
+    </footer>
+        <div class="popbox hide" id="popbox">
+        <div aria-label='Close' class="pop-overlay" role="button" tabindex="0"></div>
+        <div class="pop-content">
+            <div class="popcontent" align="center">
+                <img data-src="https://1.bp.blogspot.com/-y8AsxfEerDc/YFSyMPZF14I/AAAAAAAAAAM/JUegMgSE-3o5A_06mx0Fir2-dkB6fAGvACLcBGAsYHQ/s640/re.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  width="640" height="320" class="lazyload" alt="" />
+                <button class='g_url btn btn-success btn-dwn m-2'>Confirm</button>
+                <br/>
+            </div>
+            <button class='g_url popbox-close-button'>&times;</button>
+        </div>
+    </div>
+        <!-- Footer CSS JS -->
+<script type='text/javascript' src='//clipperroutesevere.com/f7/66/49/f76649aba3b339f239561e42ff54ae1e.js'></script>
+	<script type="text/javascript">
+	var sc_project=12875243; 
+	var sc_invisible=1; 
+	var sc_security="323d160d"; 
+	</script>
+	<script type="text/javascript"
+	src="https://www.statcounter.com/counter/counter.js"
+	async></script>
+	<noscript><div class="statcounter"><a title="Web Analytics"
+	href="https://statcounter.com/" target="_blank"><img
+	class="statcounter"
+	src="https://c.statcounter.com/12875243/0/323d160d/1/"
+	alt="Web Analytics"
+	referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js" integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.bundle.min.js" integrity="sha512-mULnawDVcCnsk9a4aG1QLZZ6rcce/jSzEGqUkeOLy0b6q0+T6syHrxlsAGH7ZVoqC93Pd0lBqd6WguPWih7VHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.0/lazysizes.min.js" integrity="sha512-JrL1wXR0TeToerkl6TPDUa9132S3PB1UeNpZRHmCe6TxS43PFJUcEYUhjJb/i63rSd+uRvpzlcGOtvC/rDQcDg==" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        var current     = window.location.href;
+        var origin      = window.location.origin;
+        var g_confirm   = current.includes('c=1');
+        var go_ads      = '#EDIT-WITH-YOUR-ADS';
+        var is_cli      = '1';
+        var is_uads     = '';
+
+        $(document).ready(function()
+        {
+            if(go_ads.includes('//'))
+            {
+                if(!g_confirm && !is_uads)
+                {
+                    $(window).scroll(function (event) {
+                        var scroll = $(window).scrollTop();
+                        if (scroll >= 200) {
+                            $('#popbox').removeClass('hide');
+                        }
+                        console.log('scroll..');                    
+                    });
+                }
+
+                $(document).on('click','.g_url',function(e)
+                {
+                    e.preventDefault();
+
+                    var g_target=current.includes("?")?current+"&c=1":current+"?c=1";
+
+                    window.open(go_ads,"_blank");
+                    window.location.href=g_target;
+                });
+
+                $(document).on('click','.ads-img',function(e)
+                {
+                    e.preventDefault();
+                    window.open(go_ads, '_blank');
+                });
+            }
+
+            $("[id*='google-cache']").remove();        
+
+            $(document).on('submit','#search-box',function(e){
+                e.preventDefault();
+
+                var query = $('#search_query').val();
+                query = query.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/\s\s+/g, ' ');
+
+                if(is_cli)
+                {
+                  var target  = 'site:'+location.host+' '+query;
+                  var uri     = 'https://www.google.com/search?q='+encodeURIComponent(target);
+                }
+                else
+                {                    
+                    var niche = $('#search_niche').val();
+                    var uri   = `${origin}/search?n=${encodeURIComponent(niche)}&q=${encodeURIComponent(query)}`;
+                }
+                window.open(uri, '_self');
+            });
+        });
+    </script>
+  </body>
+</html>
